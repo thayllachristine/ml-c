@@ -1,8 +1,3 @@
-export interface IAuthor {
-  name: string;
-  lastname: string;
-}
-
 interface IPathFromRoot {
   id: string;
   name: string;
