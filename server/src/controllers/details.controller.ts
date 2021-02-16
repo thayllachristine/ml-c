@@ -3,7 +3,7 @@ import { getDetails } from '../services/details.service';
 
 const router = express.Router();
 
-router.get('/items/:id', async (req: Request, res: Response) => {
+router.get('/api/items/:id', async (req: Request, res: Response) => {
   const id = String(req.params.id);
 
   try {
