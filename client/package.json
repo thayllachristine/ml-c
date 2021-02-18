@@ -14,7 +14,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint --ext .ts \"./src/**/\" --quiet --cache --color"
+    "lint": "eslint --ext .ts \"./src/**/\" --quiet --cache --color",
+    "storybook": "start-storybook -p 6006 -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -35,6 +36,12 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.1.18",
+    "@storybook/addon-essentials": "^6.1.18",
+    "@storybook/addon-links": "^6.1.18",
+    "@storybook/node-logger": "^6.1.18",
+    "@storybook/preset-create-react-app": "^3.1.6",
+    "@storybook/react": "^6.1.18",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.28",
     "@types/react": "^17.0.2",
