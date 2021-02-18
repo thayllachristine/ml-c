@@ -1,25 +1,21 @@
 import styled from 'styled-components';
 import color from '../../styles/colors';
+import font from '../../styles/font';
 
-const Navbar = styled.nav`
+const Wrapper = styled.nav`
   background-color: ${color.yellow};
-  column-gap: 10px;
-  display: grid;
-  grid-template-columns: 0.5fr 2fr;
-  justify-content: space-around;
+  display: flex;
+  justify-content: center;
   padding: 10px;
-  width: 100%;
+`;
 
-  div {
-    align-items: center;
-    display: flex;
-  }
+const Content = styled.div`
+  display: flex;
+  width: 80%;
 `;
 
 const Logo = styled.img`
-  flex: 1;
-  justify-self: self-end;
-  margin: 0 16px;
+  margin-right: 16px;
   width: 50px;
 `;
 
@@ -28,9 +24,9 @@ const Input = styled.input`
   border-radius: 4px 0 0 4px;
   border: none;
   color: ${color.gray.darken};
-  font-size: 16px;
+  font-size: ${font.size.medium};
   padding: 8px 12px;
-  width: 80%;
+  width: 100%;
 
   &:active,
   &:focus {
@@ -49,4 +45,4 @@ const Icon = styled.div`
   }
 `;
 
-export { Navbar, Logo, Input, Icon };
+export { Wrapper, Content, Logo, Input, Icon };
