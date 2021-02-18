@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
+import color from '../../styles/colors';
+import font from '../../styles/font';
+
 const Wrapper = styled.div`
-  color: rgba(0, 0, 0, 0.45);
-  font-size: 14px;
+  color: ${color.black.darken};
+  font-size: ${font.size.medium};
 `;
 
 const List = styled.ul`
@@ -20,7 +23,7 @@ const Item = styled.li`
   }
 
   &:last-child {
-    font-weight: bold;
+    font-weight: ${font.weight.bold};
   }
 `;
 

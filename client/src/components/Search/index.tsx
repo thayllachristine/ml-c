@@ -7,13 +7,13 @@ interface IProps {
 }
 
 const Search: FC<IProps> = ({ onChange, value }): JSX.Element => (
-  <S.Navbar>
-    <S.Logo
-      src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.12.1/mercadolibre/logo__small@2x.png"
-      alt="Mercado Libre"
-    />
+  <S.Wrapper>
+    <S.Content>
+      <S.Logo
+        src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.12.1/mercadolibre/logo__small@2x.png"
+        alt="Mercado Libre"
+      />
 
-    <div>
       <label htmlFor="inputSearch" />
       <S.Input
         id="inputSearch"
@@ -25,8 +25,8 @@ const Search: FC<IProps> = ({ onChange, value }): JSX.Element => (
       <S.Icon>
         <img src="/assets/search.svg" alt="search icon" />
       </S.Icon>
-    </div>
-  </S.Navbar>
+    </S.Content>
+  </S.Wrapper>
 );
 
 export default Search;
