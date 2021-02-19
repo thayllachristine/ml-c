@@ -5,6 +5,7 @@ import font from '../../styles/font';
 const Wrapper = styled.nav`
   background-color: ${color.yellow};
   display: flex;
+  font-family: 'Roboto', sans-serif;
   justify-content: center;
   padding: 10px;
 `;

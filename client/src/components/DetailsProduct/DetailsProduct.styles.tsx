@@ -4,6 +4,7 @@ import font from '../../styles/font';
 
 const Wrapper = styled.div`
   display: grid;
+  font-family: 'Roboto', sans-serif;
   grid-template-columns: 2fr 1fr;
 `;
 

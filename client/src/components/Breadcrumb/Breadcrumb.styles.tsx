@@ -5,6 +5,7 @@ import font from '../../styles/font';
 
 const Wrapper = styled.div`
   color: ${color.black.darken};
+  font-family: 'Roboto', sans-serif;
   font-size: ${font.size.medium};
 `;
 

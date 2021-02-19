@@ -8,6 +8,7 @@ import { Price as SPrice } from '../DetailsProduct/DetailsProduct.styles';
 const Wrapper = styled.li`
   cursor: pointer;
   display: grid;
+  font-family: 'Roboto', sans-serif;
   grid-template-columns: 0.5fr 2fr 1fr;
   padding: 4px;
 
