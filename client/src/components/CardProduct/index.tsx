@@ -1,23 +1,27 @@
 import React, { FC } from 'react';
 import * as S from './CardProduct.styles';
 
-type IPrice = {
-  currency: string;
-  amount: number;
-  decimals: number;
-};
-
 interface IProps {
   thumbnail: string;
-  price: IPrice;
+  priceCurrency: string;
+  priceAmount: number;
+  priceDecimals: number;
   title: string;
   locale: string;
 }
 
+const formatCurrency = (price: number, currency: string) =>
+  new Intl.NumberFormat(navigator.language, {
+    style: 'decimal',
+    currency,
+  }).format(price);
+
 const CardProduct: FC<IProps> = ({
   thumbnail,
   title,
-  price: { currency, amount, decimals },
+  priceCurrency,
+  priceAmount,
+  priceDecimals,
   locale,
 }): JSX.Element => (
   <S.Wrapper>
