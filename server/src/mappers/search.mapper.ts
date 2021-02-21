@@ -14,7 +14,7 @@ const getCategories = (data: any): string[] | [] => {
     : [];
 };
 
-const searchMapper = (data: any) => ({
+const searchMapper = (data: { results: ISearchItemPayload[] }) => ({
   author: getAuthor(),
   categories: getCategories(data),
   items: data.results.map((d: ISearchItemPayload) => getItems(d)),
