@@ -14,11 +14,9 @@ const props = {
   soldQuantity: 280,
   condition: 'new',
   title: 'Camiseta adidas Boca Juniors Modelo Titular Aeroready 2020 ',
-  price: {
-    currency: 'ARS',
-    amount: 6989,
-    decimals: 90,
-  },
+  priceCurrency: 'ARS',
+  priceAmount: 6989,
+  priceDecimals: 90,
 };
 
 export const DetailsProduct = () => <DetailsProductComponent {...props} />;

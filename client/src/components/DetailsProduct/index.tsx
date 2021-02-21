@@ -1,19 +1,17 @@
 import React, { FC } from 'react';
+import formatCurrencyPrice from '@utils/formatCurrencyPrice';
+
 import * as S from './DetailsProduct.styles';
 
-type TPrice = {
-  currency: string;
-  amount: number;
-  decimals: number;
-};
-
 interface IProps {
-  title: string;
   picture: string;
   description: string;
+  title: string;
   condition: string;
   soldQuantity: number;
-  price: TPrice;
+  priceCurrency: string;
+  priceAmount: number;
+  priceDecimals: number;
 }
 
 const DetailsProduct: FC<IProps> = ({
@@ -22,7 +20,9 @@ const DetailsProduct: FC<IProps> = ({
   title,
   condition,
   soldQuantity,
-  price: { currency, amount, decimals },
+  priceCurrency,
+  priceAmount,
+  priceDecimals,
 }): JSX.Element => (
   <S.Wrapper>
     <div>
@@ -43,9 +43,8 @@ const DetailsProduct: FC<IProps> = ({
       <S.Title>{title}</S.Title>
 
       <S.Price>
-        <li>{currency}</li>
-        <li>{amount}</li>
-        <li>{decimals}</li>
+        {priceCurrency} {formatCurrencyPrice(priceAmount, priceCurrency)}{' '}
+        <span>{priceDecimals}</span>
       </S.Price>
 
       <S.Button>Comprar</S.Button>
