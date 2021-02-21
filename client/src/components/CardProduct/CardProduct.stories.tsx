@@ -9,7 +9,7 @@ export default {
 const props = {
   thumbnail: 'http://http2.mlstatic.com/D_670076-MLA43733561468_102020-O.jpg',
   title: 'Camiseta adidas Boca Juniors Modelo Titular Aeroready 2020',
-  locale: 'Buenos Aires',
+  sellerCity: 'Buenos Aires',
   priceCurrency: 'ARS',
   priceAmount: 6989,
   priceDecimals: 0,
