@@ -28,6 +28,8 @@
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react/prop-types": "off",
+    "react/no-array-index-key": "off",
+    "react/no-unescaped-entities": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-filename-extension": [
@@ -39,6 +41,7 @@
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "jsx-a11y/label-has-associated-control": "off",
     "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "import/extensions": [
       "error",
@@ -48,7 +51,8 @@
         "tsx": "never"
       }
     ],
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "camelcase": "off"
   },
   "settings": {
     "import/resolver": {
