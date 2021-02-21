@@ -6,9 +6,4 @@ export default {
   title: 'Components/Search',
 };
 
-const props = {
-  onChange: () => console.log('onChange'),
-  value: '',
-};
-
-export const Search = () => <SearchComponent {...props} />;
+export const Search = () => <SearchComponent />;

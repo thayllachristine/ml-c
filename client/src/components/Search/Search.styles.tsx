@@ -36,10 +36,18 @@ const Input = styled.input`
   }
 `;
 
-const Icon = styled.div`
+const Icon = styled.button`
+  border: none;
   background-color: ${color.gray.lighten};
   border-radius: 0 4px 4px 0;
+  cursor: pointer;
   padding: 8px;
+
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
 
   img {
     height: 16px;
