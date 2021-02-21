@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import formatCurrencyPrice from '@utils/formatCurrencyPrice';
 import * as S from './CardProduct.styles';
 
 interface IProps {
@@ -7,14 +8,8 @@ interface IProps {
   priceAmount: number;
   priceDecimals: number;
   title: string;
-  locale: string;
+  sellerCity: string;
 }
-
-const formatCurrency = (price: number, currency: string) =>
-  new Intl.NumberFormat(navigator.language, {
-    style: 'decimal',
-    currency,
-  }).format(price);
 
 const CardProduct: FC<IProps> = ({
   thumbnail,
@@ -22,7 +17,7 @@ const CardProduct: FC<IProps> = ({
   priceCurrency,
   priceAmount,
   priceDecimals,
-  locale,
+  sellerCity,
 }): JSX.Element => (
   <S.Wrapper>
     <S.Image>
@@ -31,7 +26,7 @@ const CardProduct: FC<IProps> = ({
 
     <S.Content>
       <S.Price>
-        {priceCurrency} {formatCurrency(priceAmount, priceCurrency)}{' '}
+        {priceCurrency} {formatCurrencyPrice(priceAmount, priceCurrency)}{' '}
         <span>{priceDecimals}</span>
       </S.Price>
 
@@ -39,7 +34,7 @@ const CardProduct: FC<IProps> = ({
     </S.Content>
 
     <S.Locale>
-      <p>{locale}</p>
+      <p>{sellerCity}</p>
     </S.Locale>
   </S.Wrapper>
 );
