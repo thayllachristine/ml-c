@@ -11,7 +11,7 @@ export interface IProducts {
   price: IPrice;
   picture: string;
   condition: string;
-  locale: string;
+  sellerCity: string;
 }
 
 export interface IData {
