@@ -7,7 +7,7 @@ export default {
 };
 
 const props = {
-  category: 'Eletronica, Audio y Video',
+  categories: ['Eletronica, Audio y Video'],
   product: 'iPod',
 };
 
