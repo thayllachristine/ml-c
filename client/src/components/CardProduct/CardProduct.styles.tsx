@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import color from '../../styles/colors';
-import font from '../../styles/font';
+import color from '@styles/colors';
+import font from '@styles/font';
 
 import { Price as SPrice } from '../DetailsProduct/DetailsProduct.styles';
 
