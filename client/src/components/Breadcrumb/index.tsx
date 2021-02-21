@@ -2,17 +2,15 @@ import React, { FC } from 'react';
 import * as S from './Breadcrumb.styles';
 
 export interface IProps {
-  categories: Array<string>;
-  product: string;
+  breadcrumbs: Array<string>;
 }
 
-const Breadcrumb: FC<IProps> = ({ categories, product }): JSX.Element => (
+const Breadcrumb: FC<IProps> = ({ breadcrumbs }): JSX.Element => (
   <S.Wrapper>
     <S.List>
-      {categories.map((category: string) => (
-        <S.Item>{category}</S.Item>
+      {breadcrumbs.map((breadcrumb: string) => (
+        <S.Item>{breadcrumb}</S.Item>
       ))}
-      <S.Item>{product}</S.Item>
     </S.List>
   </S.Wrapper>
 );

@@ -7,8 +7,7 @@ export default {
 };
 
 const props = {
-  categories: ['Eletronica, Audio y Video'],
-  product: 'iPod',
+  breadcrumbs: ['Eletronica, Audio y Video', 'iPod'],
 };
 
 export const Breadcrumb = () => <BreadcrumbComponent {...props} />;
