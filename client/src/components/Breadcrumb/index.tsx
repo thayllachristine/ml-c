@@ -8,8 +8,8 @@ export interface IProps {
 const Breadcrumb: FC<IProps> = ({ breadcrumbs }): JSX.Element => (
   <S.Wrapper>
     <S.List>
-      {breadcrumbs.map((breadcrumb: string) => (
-        <S.Item>{breadcrumb}</S.Item>
+      {breadcrumbs.map((breadcrumb: string, id: number) => (
+        <S.Item key={id}>{breadcrumb}</S.Item>
       ))}
     </S.List>
   </S.Wrapper>
