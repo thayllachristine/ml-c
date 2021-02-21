@@ -31,9 +31,8 @@ const CardProduct: FC<IProps> = ({
 
     <S.Content>
       <S.Price>
-        <li>{currency}</li>
-        <li>{amount}</li>
-        <li>{decimals}</li>
+        {priceCurrency} {formatCurrency(priceAmount, priceCurrency)}{' '}
+        <span>{priceDecimals}</span>
       </S.Price>
 
       <h1>{title}</h1>

@@ -30,6 +30,7 @@ const Content = styled.div`
   margin: 0 16px;
 
   h1 {
+    color: ${color.black.lighten};
     margin: 0;
     font-size: ${font.size.xlarge};
     font-weight: ${font.weight.light};
