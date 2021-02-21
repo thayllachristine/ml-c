@@ -4,6 +4,13 @@ interface IItemShipping {
   free_shipping: boolean;
 }
 
+type TTSellerAddressCity = {
+  name: string;
+};
+
+type TSellerAddress = {
+  city: TTSellerAddressCity;
+};
 export interface ISearchItemPayload {
   id: string;
   title: string;
@@ -12,6 +19,7 @@ export interface ISearchItemPayload {
   condition: string;
   thumbnail: string;
   shipping: IItemShipping;
+  seller_address: TSellerAddress;
 }
 
 export interface IItemPrice {
@@ -27,6 +35,7 @@ export interface ISearchItemResponse {
   picture: string;
   condition: string;
   free_shipping: boolean;
+  sellerCity: string;
 }
 
 export interface IDetailsItemPayload extends ISearchItemPayload {

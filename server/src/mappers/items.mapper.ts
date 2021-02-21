@@ -11,4 +11,5 @@ export const getItems = (item: ISearchItemPayload): ISearchItemResponse => ({
   picture: item.thumbnail,
   condition: item.condition,
   free_shipping: item.shipping.free_shipping,
+  sellerCity: item.seller_address.city.name,
 });
