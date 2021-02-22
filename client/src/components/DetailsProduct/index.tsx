@@ -43,11 +43,12 @@ const DetailsProduct: FC<IProps> = ({
       </S.Subtitle>
 
       <S.Title>{title}</S.Title>
-
-      <S.Price>
-        {priceCurrency} {formatCurrencyPrice(priceAmount, priceCurrency)}{' '}
-        <span>{priceDecimals}</span>
-      </S.Price>
+      {priceCurrency && (
+        <S.Price>
+          {formatCurrencyPrice(priceAmount, priceCurrency)}
+          <span>{priceDecimals}</span>
+        </S.Price>
+      )}
 
       <S.Button>Comprar</S.Button>
     </S.Infos>

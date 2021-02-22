@@ -26,7 +26,7 @@ const CardProduct: FC<IProps> = ({
 
     <S.Content>
       <S.Price>
-        {priceCurrency} {formatCurrencyPrice(priceAmount, priceCurrency)}{' '}
+        {priceCurrency} {formatCurrencyPrice(priceAmount, priceCurrency)}
         <span>{priceDecimals}</span>
       </S.Price>
 
