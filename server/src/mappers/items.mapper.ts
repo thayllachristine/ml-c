@@ -6,7 +6,7 @@ export const getItems = (item: ISearchItemPayload): ISearchItemResponse => ({
   price: {
     currency: item.currency_id,
     amount: Math.floor(item.price),
-    decimals: parseFloat((item.price % 1).toFixed(2)),
+    decimals: parseInt(((item.price % 1) * 1000).toFixed(2)),
   },
   picture: item.thumbnail,
   condition: item.condition,
