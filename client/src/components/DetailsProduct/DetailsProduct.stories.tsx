@@ -17,6 +17,7 @@ const props = {
   priceCurrency: 'ARS',
   priceAmount: 6989,
   priceDecimals: 90,
+  onClick: () => {},
 };
 
 export const DetailsProduct = () => <DetailsProductComponent {...props} />;

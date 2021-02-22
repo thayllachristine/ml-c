@@ -12,6 +12,7 @@ interface IProps {
   priceCurrency: string;
   priceAmount: number;
   priceDecimals: number;
+  onClick: () => void;
 }
 
 const DetailsProduct: FC<IProps> = ({
@@ -23,36 +24,39 @@ const DetailsProduct: FC<IProps> = ({
   priceCurrency,
   priceAmount,
   priceDecimals,
-}): JSX.Element => (
-  <S.Wrapper>
-    <div>
-      <S.Image>
-        <img src={picture} alt={title} />
-      </S.Image>
+  onClick,
+}): JSX.Element => {
+  return (
+    <S.Wrapper>
+      <div>
+        <S.Image>
+          <img src={picture} alt={title} />
+        </S.Image>
 
-      <S.Description>
-        <h2>Descripción del producto</h2>
-        <article>{description}</article>
-      </S.Description>
-    </div>
+        <S.Description>
+          <h2>Descripción del producto</h2>
+          <article>{description}</article>
+        </S.Description>
+      </div>
 
-    <S.Infos>
-      <S.Subtitle>
-        <p>{condition}</p>
-        <p>{soldQuantity} vendidos</p>
-      </S.Subtitle>
+      <S.Infos>
+        <S.Subtitle>
+          <p>{condition}</p>
+          <p>{soldQuantity} vendidos</p>
+        </S.Subtitle>
 
-      <S.Title>{title}</S.Title>
-      {priceCurrency && (
-        <S.Price>
-          {formatCurrencyPrice(priceAmount, priceCurrency)}
-          <span>{priceDecimals}</span>
-        </S.Price>
-      )}
+        <S.Title>{title}</S.Title>
+        {priceCurrency && (
+          <S.Price>
+            {formatCurrencyPrice(priceAmount, priceCurrency)}
+            <span>{priceDecimals}</span>
+          </S.Price>
+        )}
 
-      <S.Button>Comprar</S.Button>
-    </S.Infos>
-  </S.Wrapper>
-);
+        <S.Button onClick={onClick}>Comprar</S.Button>
+      </S.Infos>
+    </S.Wrapper>
+  );
+};
 
 export default DetailsProduct;
