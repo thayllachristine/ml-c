@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Link as LinkComponent } from 'react-router-dom';
+
 import color from '@styles/colors';
 import font from '@styles/font';
 
@@ -15,9 +17,18 @@ const Content = styled.div`
   width: 80%;
 `;
 
-const Logo = styled.img`
+const Link = styled(LinkComponent)`
+  align-items: center;
+  display: flex;
+  justify-content: center;
   margin-right: 16px;
+`;
+
+const Logo = styled.img`
   width: 50px;
+  @media (min-width: 425px) {
+    width: 45px;
+  }
 `;
 
 const Input = styled.input`
@@ -25,7 +36,7 @@ const Input = styled.input`
   border-radius: 4px 0 0 4px;
   border: none;
   color: ${color.gray.darken};
-  font-size: ${font.size.medium};
+  font-size: ${font.size.small};
   padding: 8px 12px;
   width: 100%;
 
@@ -33,6 +44,17 @@ const Input = styled.input`
   &:focus {
     border: none;
     outline: none;
+  }
+
+  &::placeholder {
+    font-size: ${font.size.small};
+  }
+
+  @media (min-width: 425px) {
+    font-size: ${font.size.medium};
+    &::placeholder {
+      font-size: ${font.size.medium};
+    }
   }
 `;
 
@@ -54,4 +76,4 @@ const Icon = styled.button`
   }
 `;
 
-export { Wrapper, Content, Logo, Input, Icon };
+export { Wrapper, Content, Link, Logo, Input, Icon };

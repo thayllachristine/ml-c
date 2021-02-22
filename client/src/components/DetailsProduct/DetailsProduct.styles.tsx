@@ -3,36 +3,62 @@ import color from '@styles/colors';
 import font from '@styles/font';
 
 const Wrapper = styled.div`
-  display: grid;
   font-family: 'Roboto', sans-serif;
   grid-template-columns: 2fr 1fr;
+
+  @media (min-width: 596px) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 4px;
+  }
 `;
 
-const Image = styled.img`
-  border-radius: 4px;
-  object-fit: contain;
-  width: 264px;
+const Image = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 425px) {
+    display: block;
+    img {
+      width: 264px;
+    }
+  }
+
+  img {
+    border-radius: 4px;
+    object-fit: contain;
+    width: 220px;
+  }
 `;
 
 const Description = styled.div`
-  margin-top: 24px;
+  display: none;
 
-  h2 {
-    font-size: ${font.size.xlarge};
-    font-weight: ${font.weight.regular};
-    padding-bottom: 24px;
-  }
+  @media (min-width: 596px) {
+    display: block;
+    margin-top: 24px;
 
-  article {
-    color: ${color.gray.regular};
-    font-size: ${font.size.large};
-    font-weight: ${font.weight.light};
+    h2 {
+      font-size: ${font.size.xlarge};
+      font-weight: ${font.weight.regular};
+      padding-bottom: 24px;
+    }
+
+    article {
+      color: ${color.gray.regular};
+      font-size: ${font.size.medium};
+      font-weight: ${font.weight.light};
+
+      font-size: ${font.size.large};
+    }
   }
 `;
 
 const Infos = styled.div`
-  margin: 0 16px;
-  padding: 0 8px;
+  @media (min-width: 596px) {
+    margin: 0 16px;
+    padding: 0 8px;
+  }
 `;
 
 const Title = styled.h1`
@@ -57,24 +83,28 @@ const Subtitle = styled.div`
   }
 `;
 
-const Price = styled.ul`
+const Price = styled.p`
   color: ${color.black.lighten};
   display: flex;
-  font-size: ${font.size.xxxxlarge};
+  font-size: ${font.size.xxxlarge};
   font-weight: ${font.weight.regular};
   list-style-type: none;
   margin-bottom: 32px;
   padding: 0;
 
-  li {
-    &:not(:first-child) {
-      margin-left: 4px;
-    }
+  span {
+    font-size: ${font.size.medium};
+    margin-top: 2px;
 
-    &:last-child {
-      margin-top: 6px;
+    @media (min-width: 425px) {
       font-size: ${font.size.large};
+      margin-top: 6px;
     }
+  }
+
+  @media (min-width: 425px) {
+    font-size: ${font.size.xxxxlarge};
+    font-weight: ${font.weight.regular};
   }
 `;
 

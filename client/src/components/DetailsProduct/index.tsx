@@ -26,7 +26,9 @@ const DetailsProduct: FC<IProps> = ({
 }): JSX.Element => (
   <S.Wrapper>
     <div>
-      <S.Image src={picture} alt={title} />
+      <S.Image>
+        <img src={picture} alt={title} />
+      </S.Image>
 
       <S.Description>
         <h2>Descripción del producto</h2>

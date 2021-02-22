@@ -6,28 +6,55 @@ import font from '@styles/font';
 import { Price as SPrice } from '../DetailsProduct/DetailsProduct.styles';
 
 const Wrapper = styled.li`
+  border-bottom: 1px solid ${color.gray.lighten};
   cursor: pointer;
-  display: grid;
   font-family: 'Roboto', sans-serif;
-  grid-template-columns: 0.5fr 2fr 1fr;
-  padding: 4px;
+  list-style-type: none;
+  padding: 12px 2px;
 
-  &:not(:last-child) {
-    border-bottom: 1px solid ${color.gray.lighten};
+  @media (min-width: 596px) {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    padding: 4px;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 0.5fr 2fr 1fr;
   }
 `;
 
 const Image = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 596px) {
+    display: block;
+  }
+
   img {
     border-radius: 4px;
-    height: 196px;
     object-fit: contain;
-    width: 196px;
+    height: 216px;
+    width: 216px;
+
+    @media (min-width: 375px) {
+      height: 260px;
+      width: 260px;
+    }
+
+    @media (min-width: 596px) {
+      height: 196px;
+      width: 196px;
+    }
   }
 `;
 
 const Content = styled.div`
-  margin: 0 16px;
+  margin: 0 8px;
+
+  @media (min-width: 596px) {
+    margin: 0 16px;
+  }
 
   h1 {
     color: ${color.black.lighten};
@@ -44,8 +71,13 @@ const Price = styled(SPrice)`
 `;
 
 const Locale = styled.div`
-  color: ${color.black.darken};
-  margin: 16px auto;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    color: ${color.black.darken};
+    margin: 16px auto;
+  }
 `;
 
 export { Wrapper, Image, Content, Price, Locale };

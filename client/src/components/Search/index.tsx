@@ -1,5 +1,5 @@
 import React, { FC, ChangeEvent, useState, KeyboardEvent } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import * as S from './Search.styles';
 
@@ -25,12 +25,12 @@ const Search: FC = (): JSX.Element => {
   return (
     <S.Wrapper>
       <S.Content>
-        <Link to="/">
+        <S.Link to="/">
           <S.Logo
             src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.12.1/mercadolibre/logo__small@2x.png"
             alt="Mercado Libre"
           />
-        </Link>
+        </S.Link>
 
         <label htmlFor="inputSearch" />
         <S.Input
